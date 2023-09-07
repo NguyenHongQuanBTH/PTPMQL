@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\PTPMQL\\PTPMQL.csproj": {}
+    "C:\\PTPMQL\\DemoMVC\\DemoMVC.csproj": {}
   },
   "projects": {
-    "C:\\PTPMQL\\PTPMQL.csproj": {
+    "C:\\PTPMQL\\DemoMVC\\DemoMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PTPMQL\\PTPMQL.csproj",
-        "projectName": "PTPMQL",
-        "projectPath": "C:\\PTPMQL\\PTPMQL.csproj",
+        "projectUniqueName": "C:\\PTPMQL\\DemoMVC\\DemoMVC.csproj",
+        "projectName": "DemoMVC",
+        "projectPath": "C:\\PTPMQL\\DemoMVC\\DemoMVC.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "C:\\PTPMQL\\obj\\",
+        "outputPath": "C:\\PTPMQL\\DemoMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config"

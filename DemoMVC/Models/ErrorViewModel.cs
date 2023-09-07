@@ -1,4 +1,4 @@
-namespace PTPMQL.Models;
+namespace DemoMVC.Models;
 
 public class ErrorViewModel
 {
