@@ -5,10 +5,8 @@ internal class Program
     private static void Main (String [] args)
     {
         string str = "1921050489";
-        int ketQua;
-        bool kiemTra = false;
-        kiemTra = int.TryParse(str,out(ketQua));
-        System.Console.WriteLine("Ket Qua = " + ketQua);
+        int a = Convert.ToInt32(str);
+        System.Console.WriteLine("a = " + a);
     }
 }
 
