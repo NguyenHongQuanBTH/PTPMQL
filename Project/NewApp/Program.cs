@@ -1,11 +1,14 @@
-﻿internal class Program
+﻿using System.Collections.Specialized;
+
+internal class Program
 {
     private static void Main (String [] args)
     {
-        const string hoTen = "Nguyen Hong Quan";
-        const int tuoi = 23;
-        const int namLamViec = 5;
-        Console.WriteLine("Nhan vien {0} - {1} nam kinh nghiem", hoTen, tuoi, namLamViec);
+        string str = "1921050489";
+        int ketQua;
+        bool kiemTra = false;
+        kiemTra = int.TryParse(str,out(ketQua));
+        System.Console.WriteLine("Ket Qua = " + ketQua);
     }
 }
 
