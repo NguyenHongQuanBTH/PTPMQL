@@ -4,7 +4,7 @@ internal class Program
 {
     private static void Main (String [] args)
     {
-        int a = 12;
+        int a = 7;
         if (a < 0)
         {
             System.Console.WriteLine("{0} la so nguyen am", a);
