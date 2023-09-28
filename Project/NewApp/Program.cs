@@ -4,12 +4,18 @@ internal class Program
 {
     private static void Main (String [] args)
     {
-        int a, b;
-        System.Console.Write("a = ");
-        a = Convert.ToInt32(Console.ReadLine());
-        System.Console.Write("b = ");
-        b = Convert.ToInt32(Console.ReadLine());
-        System.Console.WriteLine("{0} / {1} = {2}", a, b, a / b );
+        float a = 2.5f;
+        if (a >= 9){
+            System.Console.WriteLine("Hoc sinh hoc luc gioi");
+        }else if (a >= 7.5){
+            System.Console.WriteLine("Hoc sinh hoc luc kha");
+        }else if (a >= 6){
+            System.Console.WriteLine("Hoc sinh hoc luc trung binh");
+        }else if(a >= 4.5) {
+            System.Console.WriteLine("Hoc sinh hoc luc yeu");
+        }else {
+            System.Console.WriteLine("Hoc sinh hoc luc kem");
+        }
 
     }
 }
