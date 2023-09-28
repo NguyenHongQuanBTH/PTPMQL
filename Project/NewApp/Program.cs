@@ -4,7 +4,7 @@ internal class Program
 {
     private static void Main (String [] args)
     {
-        int day = 5;
+        int day = 20;
         switch(day)
         {
             case 1 : System.Console.WriteLine("Chu Nhat"); break;
