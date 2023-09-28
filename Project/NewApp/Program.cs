@@ -4,17 +4,16 @@ internal class Program
 {
     private static void Main (String [] args)
     {
-        float a = 5;
-        if (a >= 9){
-            System.Console.WriteLine("Hoc sinh hoc luc gioi");
-        }else if (a >= 7.5){
-            System.Console.WriteLine("Hoc sinh hoc luc kha");
-        }else if (a >= 6){
-            System.Console.WriteLine("Hoc sinh hoc luc trung binh");
-        }else if(a >= 4.5) {
-            System.Console.WriteLine("Hoc sinh hoc luc yeu");
-        }else {
-            System.Console.WriteLine("Hoc sinh hoc luc kem");
+        int a = 12;
+        if (a < 0)
+        {
+            System.Console.WriteLine("{0} la so nguyen am", a);
+        }else{
+            if (a % 2 == 0){
+                System.Console.WriteLine("{0} la so nguyen duong chan", a);
+            }else{
+                System.Console.WriteLine("(0) la so nguyen duong le", a);
+            }
         }
 
     }
