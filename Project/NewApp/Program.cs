@@ -4,7 +4,7 @@ internal class Program
 {
     private static void Main (String [] args)
     {
-        float a = 9;
+        float a = 5;
         if (a >= 9){
             System.Console.WriteLine("Hoc sinh hoc luc gioi");
         }else if (a >= 7.5){
