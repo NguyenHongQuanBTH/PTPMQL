@@ -2,9 +2,10 @@
 {
     private static void Main (String [] args)
     {
-        string hoTen = "Nguyen Hong Quan";
-        int tuoi = 23;
-        Console.WriteLine("Sinh vien {0} - {1} tuoi", hoTen, tuoi);
+        const string hoTen = "Nguyen Hong Quan";
+        const int tuoi = 23;
+        const int namLamViec = 5;
+        Console.WriteLine("Nhan vien {0} - {1} nam kinh nghiem", hoTen, tuoi, namLamViec);
     }
 }
 
