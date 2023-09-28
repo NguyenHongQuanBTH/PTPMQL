@@ -4,9 +4,11 @@ public class Program
 {
     private static void Main (String [] args)
     {
-        for (int i = 0; i < 20; i ++)
+        int a = 1;
+        while(a < 19)
         {
-            System.Console.WriteLine("Vong lap thu {0}", i);
+            System.Console.WriteLine("Vong lap thu {0}", a);
+            a++;
         }
     }
 }
