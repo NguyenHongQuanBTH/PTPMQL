@@ -4,12 +4,11 @@ public class Program
 {
     private static void Main (String [] args)
     {
-        int a = 1;
-        do
+        for (int i = 0; i < 12; i ++)
         {
-            System.Console.WriteLine("Vong lap thu {0}", a);
-            a++;
-        }while(a<9);
+            if(i == 8) break;
+            System.Console.WriteLine("Vong lap thu {0}", i);
+        }
     }
 }
 
