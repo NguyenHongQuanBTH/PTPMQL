@@ -1,16 +1,14 @@
-﻿using System.Collections.Specialized;
+using NewApp.Models;
 
-public class Program
+public class Program 
 {
-    private static void Main (String [] args)
+    private static void Main(string[] args)
     {
-        for (int i = 0; i < 12; i ++)
-        {
-            if(i == 8) continue;
-            System.Console.WriteLine("Vong lap thu {0}", i);
-        }
+        Person ps1 = new Person();
+        Person ps2 = new Person();
+        ps1.FullName = "Nguyen Hong Quan";
+        ps1.Address = "Quang Ninh";
+        ps1.Age = 23;
+        ps1.Display();
     }
 }
-
-    
-
