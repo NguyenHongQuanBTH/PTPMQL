@@ -10,5 +10,9 @@ public class Program
         ps1.Address = "Quang Ninh";
         ps1.Age = 23;
         ps1.Display();
+        ps2.FullName = "Tran Hong Hanh";
+        ps2.Address = "Thai Binh";
+        ps2.Age = 22;
+        ps2.Display();
     }
 }
