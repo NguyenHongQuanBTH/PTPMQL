@@ -4,7 +4,7 @@ public class Program
 {
     private static void Main(string[] args)
     {
-        Student std1 = new Student();
+        Person std1 = new Person();
         
         
         string ten = "Nguyen Hong Quan";

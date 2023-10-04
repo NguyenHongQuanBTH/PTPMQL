@@ -5,22 +5,22 @@ namespace NewApp.Models
     public class Person
     {
         public string FullName { get; set; }
+        public int PersonID { get; set; }
         public string Address { get; set; }
         public int Age { get; set; }
     
-    public void EnterData()
+    public Person()
     {
-        System.Console.Write("FullName = ");
-        FullName = Console.ReadLine();
-        System.Console.Write("Address = ");
-        Address = Console.ReadLine();
-        System.Console.Write("Age = ");
-        Age = Convert.ToInt16(Console.ReadLine());
+        FullName = "Nguyen Hong Quan";
+        PersonID = 1921050489;
+        Address = "Quang Ninh";
+        Age = 23;
+
         
     }
-    public void Display()
+    public void Display2(string ten, string id, string diachi, int tuoi)
         {
-            System.Console.WriteLine("{0} - {1} - {2} tuoi", FullName, Address, Age);
+            System.Console.WriteLine("Sinh Vien {0} - {1} - {2} - {3} tuoi", FullName, PersonID, Address, Age);
         }
     
     public int GetYearOfBirth (int Age)
