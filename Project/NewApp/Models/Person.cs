@@ -22,5 +22,11 @@ namespace NewApp.Models
         {
             System.Console.WriteLine("{0} - {1} - {2} tuoi", FullName, Address, Age);
         }
+    
+    public int GetYearOfBirth (int Age)
+        {
+            int YearOfBirth = 2023 - Age;
+            return YearOfBirth;
+        }
     }
 }
