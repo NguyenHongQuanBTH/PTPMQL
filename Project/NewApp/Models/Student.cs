@@ -7,21 +7,25 @@ namespace NewApp.Models
         public string Address { get; set; }
         public int Age { get; set; }
     
-    public void EnterData()
+    public Student()
     {
-        System.Console.Write("FullName = ");
-        FullName = Console.ReadLine();
-        System.Console.WriteLine("StudentID = ");
-        StudentID = Console.ReadLine();
-        System.Console.Write("Address = ");
-        Address = Console.ReadLine();
-        System.Console.Write("Age = ");
-        Age = Convert.ToInt16(Console.ReadLine());
+        FullName = "Nguyen Hong Quan";
+        StudentID = "1921050489";
+        Address = "Quang Ninh";
+        Age = 23;
+
         
     }
-    public void Display()
+     public int GetYearOfBirth (int Age)
         {
-            System.Console.WriteLine("{0} - {1} - {2} - {3} tuoi", FullName, StudentID, Address, Age);
+            int YearOfBirth = 2023 - Age;
+            return YearOfBirth;
         }
+    public void Display2(string ten, string id, string diachi, int tuoi)
+        {
+            System.Console.WriteLine("Sinh Vien {0} - {1} - {2} - {3} tuoi", FullName, StudentID, Address, Age);
+        }
+
+   
     }
 }
