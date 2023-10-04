@@ -4,15 +4,17 @@ public class Program
 {
     private static void Main(string[] args)
     {
-        Employee epl1 = new Employee();
-        Employee epl2 = new Employee();
-        epl1.MaNhanVien = "MDCK64";
-        epl1.TenNhanVien = "Nguyen Hong Quan";
-        epl1.Age = 23;
-        epl1.Display();
-        epl2.MaNhanVien = "MDCK65";
-        epl2.TenNhanVien = "Nguyen Duy Anh";
-        epl2.Age = 22;
-        epl2.Display();
+        Student std1 = new Student();
+        Student std2 = new Student();
+        std1.FullName = "Nguyen Hong Quan";
+        std1.StudentID = "1921050489";
+        std1.Address = "Quang Ninh";
+        std1.Age = 23;
+        std1.Display();
+        std2.FullName = "Nguyen Duy Anh";
+        std2.StudentID = "2021050489";
+        std2.Address = "Ha Noi";
+        std2.Age = 22;
+        std2.Display();
     }
 }
