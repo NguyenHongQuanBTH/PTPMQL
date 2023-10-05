@@ -19,9 +19,9 @@ namespace NewApp.Models
         Address = Console.ReadLine();
         System.Console.Write("Age = ");
         Age = Convert.ToInt16(Console.ReadLine());
-
-
+        
     }
+    
     public void Display()
         {
             System.Console.WriteLine("Sinh vien {0} - {1} - {2} - {3} tuoi", FullName, PersonID, Address, Age);
