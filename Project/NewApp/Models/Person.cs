@@ -29,7 +29,7 @@ namespace NewApp.Models
     
     public void Display()
         {
-            System.Console.WriteLine("Sinh vien {0} - {1} - {2} - tuoi", FullName, Address, Age);
+            System.Console.WriteLine("Sinh vien {0} - {1} - {2} tuoi", FullName, Address, Age);
         }
     }
 }

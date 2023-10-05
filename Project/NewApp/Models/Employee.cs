@@ -1,18 +1,30 @@
 namespace NewApp.Models
 {
-    public class Employee : Person
+    public class Employee 
     {
-        public string EmployeeCode { get; set; }
-        public void EnterData()
+        public string MaNhanVien { get; set; }
+        public string TenNhanVien { get; set; }
+        public int Age { get; set; }
+        
+
+
+    public void EnterData()
     {
-        base.EnterData();
-        System.Console.Write("EmployeeCode = ");
-        EmployeeCode = Console.ReadLine();
+        System.Console.Write("MaNhanVien = ");
+        MaNhanVien = Console.ReadLine();
+        System.Console.Write("TenNhanVien = ");
+        TenNhanVien = Console.ReadLine();
+        System.Console.Write("Age = ");
+        try{
+            Age = Convert.ToInt16(Console.ReadLine());
+        }catch (Exception e)  
+        {
+            Age = 25;
+        }
     }
     public void Display()
-    {
-        base.Display();
-        System.Console.Write("Ma nhan vien: {0}", EmployeeCode);
-    }
+        {
+            System.Console.WriteLine("{0} - {1} - {2} tuoi", MaNhanVien, TenNhanVien, Age);
+        }
     }
 }
