@@ -4,9 +4,9 @@ public class Program
 {
     private static void Main(string[] args)
     {
-        Employee epl1 = new Employee();
-        epl1.EnterData();
+        Student std1 = new Student();
+        std1.EnterData();
         
-        epl1.Display();
+        std1.Display();
     }
 }
