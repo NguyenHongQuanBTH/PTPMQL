@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using DemoMvc.Models;
+using DemoMVC.Models;
 
-namespace DemoMvc.Controllers;
+namespace DemoMVC.Controllers;
 
 public class HomeController : Controller
 {
@@ -19,6 +19,10 @@ public class HomeController : Controller
     }
 
     public IActionResult Privacy()
+    {
+        return View();
+    }
+    public IActionResult Demo()
     {
         return View();
     }
