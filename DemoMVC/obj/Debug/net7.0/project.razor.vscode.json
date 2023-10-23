@@ -24080,6 +24080,11 @@
       "FilePath": "c:\\PTPMQL\\DemoMVC\\Views\\Person\\Index.cshtml",
       "TargetPath": "Views\\Person\\Index.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\PTPMQL\\DemoMVC\\Views\\Employee\\Index.cshtml",
+      "TargetPath": "Views\\Employee\\Index.cshtml",
+      "FileKind": "mvc"
     }
   ]
 }
