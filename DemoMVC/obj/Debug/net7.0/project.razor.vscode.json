@@ -24070,6 +24070,16 @@
       "FilePath": "c:\\PTPMQL\\DemoMVC\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\PTPMQL\\DemoMVC\\Views\\Home\\HelloWorld.cshtml",
+      "TargetPath": "Views\\Home\\HelloWorld.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\PTPMQL\\DemoMVC\\Views\\HelloWorld\\Index.cshtml",
+      "TargetPath": "Views\\HelloWorld\\Index.cshtml",
+      "FileKind": "mvc"
     }
   ]
 }
