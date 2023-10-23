@@ -24072,13 +24072,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\PTPMQL\\DemoMVC\\Views\\Home\\HelloWorld.cshtml",
-      "TargetPath": "Views\\Home\\HelloWorld.cshtml",
+      "FilePath": "c:\\PTPMQL\\DemoMVC\\Views\\HelloWorld\\Index.cshtml",
+      "TargetPath": "Views\\HelloWorld\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\PTPMQL\\DemoMVC\\Views\\HelloWorld\\Index.cshtml",
-      "TargetPath": "Views\\HelloWorld\\Index.cshtml",
+      "FilePath": "c:\\PTPMQL\\DemoMVC\\Views\\Person\\Index.cshtml",
+      "TargetPath": "Views\\Person\\Index.cshtml",
       "FileKind": "mvc"
     }
   ]
