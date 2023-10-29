@@ -8,20 +8,15 @@ namespace DemoMVC.Controllers;
         {
             return View();
         }
-        public IActionResult Number()
-        {
-            return View();
-        }
-        public IActionResult Email()
-        {
-            return View();
-        }
-    [HttpPost]
-    public IActionResult Index(string QName, string Email, string PersonID)
-    {
-        string strResult = "Xin chao" + "-" + QName + "-" + PersonID + "-" + Email;
         
-        ViewBag.thongBao = strResult;
+    [HttpPost]
+        
+        
+    public IActionResult Index(string QName, string PersonID, string Email)
+    {
+        string str = "Xin chao" + "-" + QName + "-" + PersonID + "-" + Email;
+        
+        ViewBag.thongBao = str;
         return View();
     }
     }

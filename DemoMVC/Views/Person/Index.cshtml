@@ -1,9 +1,14 @@
-<form asp-action="Index">
-    <label>FullName:</label>
-    <input type="text" name = "QName" placeholder="Enter FullName"/>
-    <input type="number" name = "PersonID" placeholder="Enter PersonID"/>
-    <input type="email" name ="Email" placeholder="Enter Email"/>
-    <input type="submit" value="Save"/>
 
-</form>
+<form asp-action="index">
+  <label for="Qname">FullName</label><br>
+  <input type="text" id="Qname" name="Qname" value=""><br>
+  <label for="PersonID">PersonID</label><br>
+  <input type="text" id="PersonID" name="PersonID" value=""><br><br>
+  <label for="Email">Email</label><br>
+  <input type="text" id="Email" name="Email" value=""><br>
+  <input type="submit" value="Send Data">
+  <input type="reset" value="Reset">
+</form> 
+
+
 <h1>@ViewBag.thongBao</h1>
