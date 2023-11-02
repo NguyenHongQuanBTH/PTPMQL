@@ -1,28 +1,30 @@
 using Microsoft.AspNetCore.Mvc;
-namespace DemoMVC.Controllers;
+namespace DemoMVC.Controllers
+{
 
-
-    public class EmployeeController : Controller
-    {
-        public IActionResult Index()
+        public class EmployeeController : Controller
         {
-            return View();
-        }
-        public IActionResult Number()
+            public IActionResult Index()
+            {
+                return View();
+            }
+            public IActionResult Number()
+            {
+                return View();
+            }
+            public IActionResult Email()
+            {
+                return View();
+            }
+        [HttpPost]
+        public IActionResult Index(string QName, string eplID, string Email)
         {
-            return View();
-        }
-        public IActionResult Email()
-        {
-            return View();
-        }
-    [HttpPost]
-    public IActionResult Index(string QName, string eplID, string Email)
-    {
-        string strResult = "Xin chao" + "-" + QName + "-" + eplID + "-" + Email;
+            string strResult = "Xin chao" + "-" + QName + "-" + eplID + "-" + Email;
         
-        ViewBag.thongBao = strResult;
-        return View();
-    }
-    }
-    //Nguyen Hong Quan - 1921050489
+            ViewBag.thongBao = strResult;
+            return View();
+        }
+        }
+
+        //Nguyen Hong Quan - 1921050489
+}

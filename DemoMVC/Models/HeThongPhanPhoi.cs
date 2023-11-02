@@ -1,8 +1,10 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace DemoMVC.Models;
-public class HeThongPhanPhoi
+namespace DemoMVC.Models
 {
-    public string MaHTPP { get; set; }
-    public string TenHTPP { get; set; }
+    public class HeThongPhanPhoi
+    {
+        public string MaHTPP { get; set; }
+        public string TenHTPP { get; set; }
+    }
 }

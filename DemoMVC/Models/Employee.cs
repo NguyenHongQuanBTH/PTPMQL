@@ -1,8 +1,10 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace DemoMVC.Models;
-public class Employee : Person
+namespace DemoMVC.Models
 {
-    public string EmployeeID { get; set; }
-    public int Age { get; set; }
+    public class Employee : Person
+    {
+        public string EmployeeID { get; set; }
+        public int Age { get; set; }
+    }
 }
