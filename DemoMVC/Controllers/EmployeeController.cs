@@ -17,7 +17,7 @@ namespace DemoMVC.Controllers;
             return View();
         }
     [HttpPost]
-    public IActionResult Index(string QName, string Email, string eplID)
+    public IActionResult Index(string QName, string eplID, string Email)
     {
         string strResult = "Xin chao" + "-" + QName + "-" + eplID + "-" + Email;
         
