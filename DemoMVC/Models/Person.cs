@@ -1,5 +1,11 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace DemoMVC.Models;
 public class Person
 {
-    public string  Fullname { get; set; }
+    public string PersonID { get; set; }
+    public string FullName { get; set; }
+    [DataType(DataType.Date)]
+    public string Address { get; set; }
+    
 }
