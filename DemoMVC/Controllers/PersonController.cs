@@ -1,3 +1,4 @@
+using DemoMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 namespace DemoMVC.Controllers;
 
@@ -8,16 +9,20 @@ namespace DemoMVC.Controllers;
         {
             return View();
         }
+         
+         [HttpPost]
         
-    [HttpPost]
         
-        
-    public IActionResult Index(string QName, string PersonID, string Email)
+    public IActionResult Index(Person ps)
     {
-        string str = "Xin chao" + "-" + QName + "-" + PersonID + "-" + Email;
+        string strOutput = "Xin chao" + "-" + ps.PersonID + "-" + ps.FullName  + "-" + ps.Address;
         
-        ViewBag.thongBao = str;
+        ViewBag.thongBao = strOutput;
         return View();
     }
+    
     }
-    //Nguyen Hong Quan - 1921050489
+    
+        
+   
+   //  Nguyen Hong Quan - 1921050489

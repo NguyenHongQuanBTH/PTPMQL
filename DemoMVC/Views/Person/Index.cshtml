@@ -1,14 +1,14 @@
 
 <form asp-action="index">
-  <label for="Qname">FullName</label><br>
-  <input type="text" id="Qname" name="Qname" value=""><br>
   <label for="PersonID">PersonID</label><br>
-  <input type="text" id="PersonID" name="PersonID" value=""><br><br>
-  <label for="Email">Email</label><br>
-  <input type="text" id="Email" name="Email" value=""><br>
+  <input type="text" id="PersonID" name="PersonID" value=""><br>
+  <label for="FullName">FullName</label><br>
+  <input type="text" id="FullName" name="FullName" value=""><br><br>
+  <label for="Address">Address</label><br>
+  <input type="text" id="Address" name="Address" value=""><br>
   <input type="submit" value="Send Data">
   <input type="reset" value="Reset">
 </form> 
+<h1>Du lieu tu controller gui ve la: @ViewBag.thongBao</h1>
 
-
-<h1>@ViewBag.thongBao</h1>
+@* Nguyen Hong Quan *@
