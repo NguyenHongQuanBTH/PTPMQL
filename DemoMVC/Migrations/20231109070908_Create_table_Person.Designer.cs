@@ -31,6 +31,9 @@ namespace DemoMVC.Migrations
                     b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("TEXT");
+                    
+                    
+
 
                     b.HasKey("PersonId");
 

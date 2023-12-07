@@ -1,0 +1,97 @@
+@model DemoMVC.Models.Person
+@{
+    ViewData["Title"] = "Create";
+} 
+<h1>Create</h1>
+<h4>Person</h4>
+<hr/>
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<body>
+
+<h3>Using CSS to style an HTML Form</h3>
+
+<div>
+  <form action="/action_page.php">
+    <label for="PS1">PersonId</label>
+    <input type="text" id="PS1" name="PersonId" placeholder="PersonId..">
+
+    <label for="Fname">FullName</label>
+    <input type="text" id="Fname" name="FullName" placeholder="Your FullName..">
+
+     <label for="Adname">Address</label>
+    <input type="text" id="Adname" name="Address" placeholder="Your Address..">
+    
+  
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</body>
+</html>
+@* <div class ="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div  asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="PersonId" class="control-label"></label>
+            <input asp-for="PersonId" class="form-control"/>
+            <span asp-validation-for="PersonId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="FullName" class="control-label"></label>
+            <input asp-for="FullName" class="form-control"/>
+            <span asp-validation-for="FullName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Address" class="control-label"></label>
+            <input asp-for="Address" class="form-control"/>
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary"/>
+            
+        </div>
+        </form>
+
+    </div>
+
+</div> *@
+<div>
+    <a asp-action="Index">Back to list</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
