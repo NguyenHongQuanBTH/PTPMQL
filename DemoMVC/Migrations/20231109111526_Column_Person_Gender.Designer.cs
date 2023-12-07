@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DemoMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbcontext))]
-    [Migration("20231109070908_Create_table_Person")]
-    partial class Create_table_Person
+    [Migration("20231109111526_Column_Person_Gender")]
+    partial class Column_Person_Gender
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,9 +31,10 @@ namespace DemoMVC.Migrations
                     b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("TEXT");
-                    
-                    
 
+                    // b.Property<string>("Gender")
+                    //     .IsRequired()
+                    //     .HasColumnType("TEXT");
 
                     b.HasKey("PersonId");
 

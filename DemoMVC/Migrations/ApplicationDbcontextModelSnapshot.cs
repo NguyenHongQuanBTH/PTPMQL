@@ -29,6 +29,10 @@ namespace DemoMVC.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    // b.Property<string>("Gender")
+                    //     .IsRequired()
+                    //     .HasColumnType("TEXT");
+
                     b.HasKey("PersonId");
 
                     b.ToTable("Persons");
