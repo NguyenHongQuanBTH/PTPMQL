@@ -1,22 +1,28 @@
+using System.Reflection.Emit;
 using Microsoft.EntityFrameworkCore;
 using DemoMVC.Data;
 using DemoMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Drawing.Printing;
+
 
 namespace DemoMVC.Controllers
 {
     public class PersonController : Controller
     {
         private readonly ApplicationDbcontext _context;
+       
         public PersonController(ApplicationDbcontext context)
+        
         {
             _context = context;
         }
         public async Task<IActionResult> Index()
-        {
-            var Models = await _context.Person.ToListAsync();
-            return View(Models);
+        {   
+            var model = await _context.Person.ToListAsync();
+            return View(model);
         }
         public IActionResult Create()
         {
@@ -24,7 +30,7 @@ namespace DemoMVC.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PersonId, FullName, Address")] Person person)
+        public async Task<IActionResult> Create([Bind("PersonId, FullName, Address, Gender")] Person person)
         {
            if(ModelState.IsValid)
            {
@@ -106,6 +112,8 @@ namespace DemoMVC.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        
+              
         private bool PersonExists(string id)
         {
             return (_context.Person?.Any(e => e.PersonId == id)).GetValueOrDefault();
