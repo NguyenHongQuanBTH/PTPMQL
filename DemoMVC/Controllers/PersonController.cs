@@ -30,7 +30,7 @@ namespace DemoMVC.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PersonId, FullName, Address, Gender")] Person person)
+        public async Task<IActionResult> Create([Bind("PersonId, FullName, Address")] Person person)
         {
            if(ModelState.IsValid)
            {
@@ -55,7 +55,7 @@ namespace DemoMVC.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("PersonId, FullName, Address, Gender")] Person person)
+        public async Task<IActionResult> Edit(string id, [Bind("PersonId, FullName, Address")] Person person)
         {
             if(id != person.PersonId)
             {
@@ -120,3 +120,4 @@ namespace DemoMVC.Controllers
         }
     }
 }
+//NguyenHongQuan_1921050489
