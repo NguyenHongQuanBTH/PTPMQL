@@ -1,4 +1,4 @@
-<form asp-action="index">
+@* <form asp-action="index">
   <label for="Qname">FullName</label><br>
   <input type="text" id="Qname" name="Qname" value=""><br>
   <label for="eplID">Ma Nhan Vien</label><br>
@@ -8,4 +8,52 @@
   <input type="submit" value="Send Data">
   <input type="reset" value="Reset">
 </form> 
-<h1>@ViewBag.thongBao</h1>
+<h1>@ViewBag.thongBao</h1> *@
+@model IEnumerable<DemoMVC.Models.Employee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PersonId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PersonId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PersonId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@* NguyenHongQuan *@
