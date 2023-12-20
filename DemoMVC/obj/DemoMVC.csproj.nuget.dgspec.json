@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\PTPMQL\\DemoMVC\\DemoMVC.csproj": {}
+    "C:\\PTPMQL1\\DemoMVC\\DemoMVC.csproj": {}
   },
   "projects": {
-    "C:\\PTPMQL\\DemoMVC\\DemoMVC.csproj": {
+    "C:\\PTPMQL1\\DemoMVC\\DemoMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PTPMQL\\DemoMVC\\DemoMVC.csproj",
+        "projectUniqueName": "C:\\PTPMQL1\\DemoMVC\\DemoMVC.csproj",
         "projectName": "DemoMVC",
-        "projectPath": "C:\\PTPMQL\\DemoMVC\\DemoMVC.csproj",
+        "projectPath": "C:\\PTPMQL1\\DemoMVC\\DemoMVC.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "C:\\PTPMQL\\DemoMVC\\obj\\",
+        "outputPath": "C:\\PTPMQL1\\DemoMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -61,10 +61,6 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[7.0.11, )"
-            },
-            "X.PagedList.Mvc.Core": {
-              "target": "Package",
-              "version": "[8.4.7, )"
             }
           },
           "imports": [
