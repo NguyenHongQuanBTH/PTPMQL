@@ -560,3 +560,4 @@ C:\PTPMQL (1)\DemoMVC\obj\Debug\net7.0\refint\DemoMVC.dll
 C:\PTPMQL (1)\DemoMVC\obj\Debug\net7.0\DemoMVC.pdb
 C:\PTPMQL (1)\DemoMVC\obj\Debug\net7.0\DemoMVC.genruntimeconfig.cache
 C:\PTPMQL (1)\DemoMVC\obj\Debug\net7.0\ref\DemoMVC.dll
+C:\PTPMQL (1)\DemoMVC\obj\Debug\net7.0\DemoMVC.sourcelink.json
