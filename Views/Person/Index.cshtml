@@ -1,0 +1,59 @@
+@model IEnumerable<DemoMVC.Models.Person>
+  @{
+    ViewData["Title"] = "Index";
+  }
+  <h1>Index</h1>
+  <p>
+    <a asp-action="Create">Create New</a>
+  </p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>
+          @Html.DisplayNameFor(Model => Model.FullName)
+        </th>
+        <th>
+           @Html.DisplayNameFor(Model => Model.Address)
+        </th>
+        
+        <th></th>
+      </tr>
+
+    </thead>
+    <tbody>
+      @foreach (var item in Model)
+      {
+        <tr>
+          <td>
+            @Html.DisplayNameFor(ModelItem => item.FullName)
+          </td>
+          <td>
+            @Html.DisplayNameFor(ModelItem => item.Address)
+          </td>
+         
+          <td>
+            <a asp-action="Edit" asp-route-id="@item.PersonId">Edit</a>
+            <a asp-action="Delete" asp-route-id="@item.PersonId">Delete</a>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+
+
+
+
+@* <form asp-action="index">
+  <label for="PersonId">PersonId</label><br>
+  <input type="text" id="PersonId" name="PersonId" value=""><br>
+  <label for="FullName">FullName</label><br>
+  <input type="text" id="FullName" name="FullName" value=""><br><br>
+  <label for="Address">Address</label><br>
+  <input type="text" id="Address" name="Address" value=""><br>
+  <input type="submit" value="Send Data">
+  <input type="reset" value="Reset">
+</form> 
+<h1>Du lieu tu controller gui ve la: @ViewBag.thongBao</h1> *@
+
+@* Nguyen Hong Quan *@

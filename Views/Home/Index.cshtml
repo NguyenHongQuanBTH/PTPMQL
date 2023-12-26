@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<form asp-action="Index">
+    <label>Nhap Ho Ten</label>
+    <input type="text" name="FullName"/>
+    <label>Nhap Dia Chi</label>
+    <input type="text" name="Address"/>
+    <input type="submit" value="Send Data"/>
+</form>
+<h1>@ViewBag.Message</h1>
+
+@* <div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div> *@
