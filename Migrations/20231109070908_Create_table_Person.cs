@@ -17,7 +17,7 @@ namespace DemoMVC.Migrations
                     PersonId = table.Column<string>(type: "TEXT", nullable: false),
                     FullName = table.Column<string>(type: "TEXT", nullable: false),
                     Address = table.Column<string>(type: "TEXT", nullable: false),
-                    // Gender = table.Column<string>(type: "TEXT", nullable: false)
+                    
                     
                 },
                 constraints: table =>
