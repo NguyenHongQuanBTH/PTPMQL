@@ -1,33 +1,3 @@
-// using Microsoft.AspNetCore.Mvc;
-// namespace DemoMVC.Controllers
-// {
-
-//         public class EmployeeController : Controller
-//         {
-//             public IActionResult Index()
-//             {
-//                 return View();
-//             }
-//             public IActionResult Number()
-//             {
-//                 return View();
-//             }
-//             public IActionResult Email()
-//             {
-//                 return View();
-//             }
-//         [HttpPost]
-//         public IActionResult Index(string QName, string eplID, string Email)
-//         {
-//             string strResult = "Xin chao" + "-" + QName + "-" + eplID + "-" + Email;
-        
-//             ViewBag.thongBao = strResult;
-//             return View();
-//         }
-//         }
-
-//         //Nguyen Hong Quan - 1921050489
-// }
 using DemoMVC.Data;
 using DemoMVC.Models;
 using DemoMVC.Models.Process;
@@ -38,11 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using OfficeOpenXml;
 using X.PagedList;
 
-namespace DemoMVC.Controllers{
-    public class EmployeeController : Controller
+namespace DemoMVC.Controllers {
+    public class DaiLyController : Controller
     {
         private readonly ApplicationDbcontext _context;
-        public EmployeeController(ApplicationDbcontext context){
+        public DaiLyController(ApplicationDbcontext context){
             _context=context;
         }
          private ExcelProcess _excelPro = new ExcelProcess();
@@ -69,22 +39,22 @@ namespace DemoMVC.Controllers{
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create ([Bind("EmployeeID,FullName,Address, Gender, Age")] Employee employee){
+        public async Task<IActionResult> Create ([Bind("MaDaiLy, TenDaiLy, DiaChi, NguoiDaiDien, DienThoai, MaHTPP")] DaiLy daiLy){
             if(ModelState.IsValid){
-                _context.Add(employee);
+                _context.Add(daiLy);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(employee);
+            return View(daiLy);
         }
         public async Task<IActionResult> Edit(String id)
         {
-            if (id == null || _context.Employee == null)
+            if (id == null || _context.DaiLy == null)
             {
                 return NotFound();
             }
-            var employee = await _context.Employee.FindAsync(id);
-            if (employee == null)
+            var daily = await _context.DaiLy.FindAsync(id);
+            if (daily == null)
             {
                 return NotFound();
             }
@@ -92,16 +62,16 @@ namespace DemoMVC.Controllers{
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(String id, [Bind("EmployeeID, FullName, Address, Gender, Age")] Employee employee){
-            if (id !=employee.EmployeeID){
+        public async Task<IActionResult> Edit(String id, [Bind("MaDaiLy, TenDaiLy, DiaChi, NguoiDaiDien, DienThoai, MaHTPP")] DaiLy daiLy){
+            if (id !=daiLy.MaDaiLy){
                 return NotFound();
             }
             if (ModelState.IsValid){
                 try{
-                    _context.Update(employee);
+                    _context.Update(daiLy);
                     await _context.SaveChangesAsync();
                 }catch(DbUpdateConcurrencyException){
-                    if (!PersonExists(employee.EmployeeID)){
+                    if (!PersonExists(daiLy.MaDaiLy)){
                         return NotFound();
                     }else{
                         throw;
@@ -114,15 +84,15 @@ namespace DemoMVC.Controllers{
 
         private bool PersonExists(string id)
         {
-            return (_context.Employee?.Any(e=>e.EmployeeID==id)).GetValueOrDefault();
+            return (_context.DaiLy?.Any(e=>e.MaDaiLy==id)).GetValueOrDefault();
         }
         public async Task<IActionResult> Delete(String id)
         {
-            if(id==null || _context.Employee == null){
+            if(id==null || _context.DaiLy == null){
                 return NotFound();
             }
-            var employee = await _context.Employee.FirstOrDefaultAsync(m => m.EmployeeID == id);
-            if (employee ==  null){
+            var daily = await _context.DaiLy.FirstOrDefaultAsync(m => m.MaDaiLy == id);
+            if (daily ==  null){
                 return NotFound();
             }
             return View();
@@ -130,13 +100,13 @@ namespace DemoMVC.Controllers{
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConFirmed(String id){
-            if(_context.Employee==null){
-                return Problem ("Entity set 'ApplicationDbcontext.Employee' is null." );
+            if(_context.DaiLy==null){
+                return Problem ("Entity set 'ApplicationDbcontext.DaiLy' is null." );
             }
-            var employee = await _context.Employee.FindAsync(id);
-            if (employee !=null)
+            var daily = await _context.DaiLy.FindAsync(id);
+            if (daily !=null)
             {
-                _context.Employee.Remove(employee);
+                _context.DaiLy.Remove(daily);
             }
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
@@ -167,13 +137,14 @@ namespace DemoMVC.Controllers{
                                 var dt = _excelPro.ExcelToDataTable(fileLocation);
                                 for(int i = 0; i < dt.Rows.Count; i++)
                                 {
-                                    var epl = new Employee();
-                                    epl.EmployeeID = dt.Rows[i][0].ToString();
-                                    epl.FullName = dt.Rows[i][1].ToString();
-                                    epl.Address = dt.Rows[i][2].ToString();
-                                    epl.Gender = dt.Rows[i][3].ToString();
-                                    
-                                    _context.Add(epl);
+                                    var dl = new DaiLy();
+                                    dl.MaDaiLy = dt.Rows[i][0].ToString();
+                                    dl.TenDaiLy = dt.Rows[i][1].ToString();
+                                    dl.DiaChi = dt.Rows[i][2].ToString();
+                                    dl.NguoiDaiDien = dt.Rows[i][3].ToString();
+                                    dl.DienThoai = dt.Rows[i][4].ToString();
+                                     dl.MaHTPP = dt.Rows[i][5].ToString();
+                                    _context.Add(dl);
                                 }
                                 await _context.SaveChangesAsync();
                                 return RedirectToAction(nameof(Index));

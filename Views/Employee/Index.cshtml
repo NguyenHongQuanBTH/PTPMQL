@@ -1,4 +1,4 @@
-<form asp-action="index">
+@* <form asp-action="index">
   <label for="Qname">FullName</label><br>
   <input type="text" id="Qname" name="Qname" value=""><br>
   <label for="eplID">Ma Nhan Vien</label><br>
@@ -8,4 +8,106 @@
   <input type="submit" value="Send Data">
   <input type="reset" value="Reset">
 </form> 
-<h1>@ViewBag.thongBao</h1>
+<h1>@ViewBag.thongBao</h1> *@
+@model IEnumerable<DemoMVC.Models.Employee>
+@using X.PagedList;
+@using X.PagedList.Mvc.Core;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="w3-container">
+    <div class="w3-row">
+        <h1>Index</h1>
+        <a asp-action="Create" class="w3-btn w3-border w3-border-blue w3-round w3-tiny w3-horver-blue">+ Add new</a>
+        <a asp-action="Download" class="w3-btn w3-border w3-border-blue w3-round w3-right w3-tiny w3-horver-blue">Download</a>
+
+    </div>
+    <hr/>
+    <table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @* <table class="w3-table-all w3-card-4 w3-centered">
+        <thead>
+            <tr class="w3-blue">
+                <th class="w3-col l2">PersonId</th>
+                <th class="w3-col l4">Full Name</th>
+                <th class="w3-col l2">Address</th>
+                
+            </tr>
+        </thead>
+        <tbody> *@
+            @foreach (var item in Model)
+            {
+                @* <tr>
+                    <td class="w3-col l2">@item.PersonId</td>
+                    <td class="w3-col l4">@item.FullName</td>
+                    <td class="w3-col l2">@item.Address</td>
+                    <td class="w3-col l2">
+                        <a asp-action="Edit" asp-route-id="@item.PersonId" class="w3-button w3-green w3-round-large w3-small"><i class="fa fa-edit"></i></a>
+                        <a asp-action="Delete" asp-route-id="@item.PersonId" class="w3-button w3-red w3-round-large w3-small"><i class="fa fa-trash"></i></a>
+                    </td>
+                </tr> *@
+                <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.EmployeeID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.EmployeeID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.EmployeeID">Delete</a>
+            </td>
+        </tr>
+            }
+        </tbody>
+    </table>
+ @using (Html.BeginForm("Index", "Employee", FormMethod.Get, new { id="form1"})){
+    <div class="row">
+        <div class="col-md-11">
+            @Html.PagedListPager((IPagedList) Model, page => Url.Action("Index", new {page = page,
+            pageSize= ViewBag.psize}), 
+            new X.PagedList.Web.Common.PagedListRenderOptions { LiElementClasses = new string[] {"page-item"}, 
+            PageClasses = new string[] { "page-link" }})
+        </div>
+        <div class="col-md-1">
+            @Html.DropDownList("pagesize", null, new {@class="form-select"})
+        </div>
+    </div>
+
+}
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#pagesize").change(function(){
+            $("#form1").submit();
+        });
+    });
+</script>   
+</div>
+NguyenHongQuan-1921050489

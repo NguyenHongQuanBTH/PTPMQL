@@ -12149,19 +12149,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\khach\\.nuget\\packages\\": {}
+    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\PTPMQL (1)\\DemoMVC\\DemoMVC.csproj",
+      "projectUniqueName": "C:\\PTPMQL\\DemoMVC\\PTPMQL\\DemoMVC.csproj",
       "projectName": "DemoMVC",
-      "projectPath": "C:\\PTPMQL (1)\\DemoMVC\\DemoMVC.csproj",
-      "packagesPath": "C:\\Users\\khach\\.nuget\\packages\\",
-      "outputPath": "C:\\PTPMQL (1)\\DemoMVC\\obj\\",
+      "projectPath": "C:\\PTPMQL\\DemoMVC\\PTPMQL\\DemoMVC.csproj",
+      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+      "outputPath": "C:\\PTPMQL\\DemoMVC\\PTPMQL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\khach\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"

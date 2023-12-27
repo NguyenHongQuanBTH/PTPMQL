@@ -2,6 +2,7 @@
 using DemoMVC.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,42 +10,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DemoMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbcontext))]
-    partial class ApplicationDbcontextModelSnapshot : ModelSnapshot
+    [Migration("20231227073219_Table_Employees")]
+    partial class Table_Employees
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
-
-            modelBuilder.Entity("DemoMVC.Models.DaiLy", b =>
-                {
-                    b.Property<string>("MaDaiLy")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("DiaChi")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("DienThoai")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("MaHTPP")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("NguoiDaiDien")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("TenDaiLy")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("MaDaiLy");
-
-                    b.ToTable("DaiLys");
-                });
 
             modelBuilder.Entity("DemoMVC.Models.Employee", b =>
                 {
